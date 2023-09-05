@@ -1,7 +1,5 @@
-/*HEADER*/
-
+/* HEADER */
 header h1 {
-
     font-family: 'Shrikhand', sans-serif;
     font-size: 30px;
     font-weight: 400;
@@ -15,11 +13,11 @@ header h1 {
     position: relative;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-/*LOCALISATION*/
 
+/* LOCALISATION */
 .location {
     background: #EAEAEA;
-    border:none;
+    border: none;
     display: flex;
     height: 50px;
     justify-content: center;
@@ -27,13 +25,11 @@ header h1 {
     gap: 17px;
     flex-shrink: 0;
     padding-left: 60px;
-    
 }
 
 .fa-solid.fa-solid {
-color:#353535; /*couleur icone localisation*/
+    color: #353535; /* couleur icone localisation */
 }
-
 
 input {
     border: none;
