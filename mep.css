@@ -1,0 +1,127 @@
+
+
+body{
+    margin: 0px;  
+}
+
+
+/* HEADER */
+header h1 {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0px;
+    display: flex;
+    height: 40px;
+    padding: 14px 89px 13px 89px;
+    justify-content: center;
+    align-items: center;
+    background: var(--white, #FFF);
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.fa-solid.fa-arrow-left{
+
+    position: relative;
+    bottom: 40px;
+    left: 20px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    
+
+}
+
+
+.menu-img img {
+    position: relative;
+    top: -30px;
+    min-width: 375px;
+    height: 275px;
+
+
+} 
+
+.title{
+    font-family: "Shrikhand";
+    font-size: 18px;
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.fa-regular.fa-heart {
+    position: relative;
+    font-size: 22px;
+
+}
+
+h3{
+
+    padding-top: 40px;
+    font-weight: 300;
+    border-bottom: 3px solid #99E2D0 ;
+    width: 40px;
+
+}
+
+
+.container-menu { 
+
+    font-family:"roboto";
+    position:relative ;
+    bottom:80px;
+    border-radius: 15px;
+    width: 413px;
+    height: 1307px;
+    flex-shrink: 0;
+    background: #F6F6F6;
+}
+
+.menu-item{
+  margin: 15px;
+  padding: 15px;
+width: 349px;
+height: 69px;
+
+border-radius: 15.043px;
+background: var(--White, #FFF);
+box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+}
+
+h4 {
+    
+    margin: 5px 0 5px 5px;
+}
+
+.item-price{
+    position: relative;
+    bottom: 60px;
+    left: 300px;
+}
+
+
+.btn-gradient {
+ margin:20px 40px 40px 40px;
+    width: 218px;
+    height: 50px;
+    color: white;
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);  
+
+    outline: none; /* Supprime le contour lorsqu'il est en focus */
+}
+
+.btn-gradient:hover{
+    border-radius: 25px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
