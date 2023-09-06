@@ -22,6 +22,7 @@ footer {
 
 
 .footer-list {
+    font-family: "Roboto";
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -39,3 +40,6 @@ footer {
 .fa-solid.fa-handshake-angle {
     color: var(--white, #FFF);
 }
+
+
+
