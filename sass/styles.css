@@ -126,11 +126,26 @@ footer {
   border-radius: 25px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transform: scale(105%); /* Met l'élément à 150% de sa taille d'origine */
 }
 
 /*SECTION FONCTIONNEMENT*/
 .functioning {
   padding-bottom: 30px;
+  text-align: center;
+  /* Centre la section horizontalement */
+  margin: 0 auto;
+  max-width: 1280px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
+}
+@media (min-width: 768px) {
+  .functioning {
+    display: flex;
+    padding: 50px 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-self: stretch;
+  }
 }
 .functioning-title {
   font-family: "Roboto";
@@ -138,15 +153,17 @@ footer {
   font-weight: 700;
   padding-left: 20px;
   padding-top: 30px;
+  display: flex;
+  justify-content: flex-start;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .functioning ol {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 322.486px;
+    width: 33%;
     height: 72.379px;
-    gap: 25px;
+    gap: 29px;
   }
 }
 .functioning-section li {
@@ -219,6 +236,16 @@ footer {
   background: var(--background, #F6F6F6);
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .restaurant-section {
+    display: flex;
+    padding: 0px 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+  }
+}
 .restaurant-section a {
   text-decoration: none; /* Supprime la soulignement */
   outline: none; /* Supprime la bordure de focus */
@@ -230,13 +257,23 @@ footer {
   padding-left: 20px;
   padding-top: 40px;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 .restaurant-section .restaurant-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  padding-bottom: 75px;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .restaurant-section .restaurant-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 }
 .restaurant-section .card-menu {
   display: flex;
@@ -245,17 +282,14 @@ footer {
   overflow: hidden;
   position: relative; /* Ajout de position relative au conteneur */
 }
-@media (min-width: 1024px) {
-  .restaurant-section .card-menu {
-    display: grid;
-  }
-}
 .restaurant-section .card-menu img {
-  width: 346px;
-  height: 231px;
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px 15px 0 0;
 }
 .restaurant-section .card-badge {
   font-family: "roboto";
@@ -322,6 +356,13 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .footer-title {
