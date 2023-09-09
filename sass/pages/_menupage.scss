@@ -1,3 +1,17 @@
+.body-menu-page {
+  
+    background-color: #F6F6F6; /* Couleur d'arrière-plan globale */
+
+    padding: 0; /* Supprimez également la marge interne du body */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    width: 100%; /* Utilisez toute la largeur de l'écran */
+    max-width: 1440px; /* Supprimez la largeur maximale fixe */
+   }
+
+
+
 .menu-img img {
     position: relative;
     top: -30px;
@@ -26,13 +40,14 @@
 
     padding-top: 40px;
     font-weight: 300;
-    border-bottom: 3px solid #99E2D0 ;
+    border-bottom: 3px solid $tertiary ;
     width: 40px;
 
 }
 
 
 .container-menu { 
+
 
     font-family:"roboto";
     position:relative ;
@@ -42,6 +57,7 @@
     height: 1307px;
     flex-shrink: 0;
     background: #F6F6F6;
+
 }
 
 .menu-item{

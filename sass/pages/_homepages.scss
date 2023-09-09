@@ -1,58 +1,49 @@
 
 
-/*EXPLORER*/
 
-.explorer{
-    
+
+/* Section Explorer */
+.explorer {
     text-align: center;
-    background-color:#F6F6F6;
+    background-color: #F6F6F6;
+}
 
-
-& h2 {
-
+.explorer h2 {
     font-family: "Roboto";
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-align: center;
-    font-size: 24px;
     padding-top: 40px;
-    font-weight: 700;
-    margin: 0px 58px 0px 58px;
-
+    margin: 0px 58px;
 }
 
-& p {
+.explorer p {
     font-family: "Roboto";
     font-size: 18px;
-    font-style: normal;
     font-weight: 300;
     line-height: normal;
 }
-}
 
-
+/* Bouton Gradient */
 .btn-gradient {
     width: 218px;
     height: 50px;
     color: white;
-    border: none; /* Supprime la bordure par défaut */
+    border: none;
     border-radius: 25px;
     font-size: 16px;
     font-weight: 500;
     background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);  
-    margin-bottom: 50px; 
-    outline: none; /* Supprime le contour lorsqu'il est en focus */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    outline: none;
 }
 
-.btn-gradient:hover{
+.btn-gradient:hover {
     border-radius: 25px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-    transform: scale(105%); /* Met l'élément à 150% de sa taille d'origine */
-
 }
 
 
@@ -62,16 +53,15 @@
 .functioning {
     padding-bottom: 30px;
     text-align: center;
-     /* Centre la section horizontalement */
      margin: 0 auto;
      max-width: 1280px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
  @media (min-width:768px) {
     display: flex;
-padding: 50px 180px;
-flex-direction: column;
-align-items: flex-start;
-gap: 25px;
-align-self: stretch;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-self: stretch;
+    
  }
 
 
@@ -92,7 +82,6 @@ align-self: stretch;
             align-items: center;
             width: 33%;
             height: 72.379px;
-                        
             gap: 29px;
         }
         }
@@ -103,6 +92,7 @@ align-self: stretch;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        flex-wrap: nowrap;
      
     }
 
@@ -150,6 +140,10 @@ align-self: stretch;
         .fa-solid.fa-store:hover {
             color: #9356DC; /* Changement de couleur au survol */
         }
+
+        @media (min-width:768px) {
+            flex-wrap: nowrap;
+        }
     }
 
 
@@ -163,14 +157,16 @@ align-self: stretch;
 
     background: var(--background, #F6F6F6);
     text-decoration: none;
+    padding: 0 18px 75px 18px;
 
     @media (min-width:768px) {
-        display: flex;
-    padding: 0px 180px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 28px;
     align-self: stretch;
+
+    
     }
 
 
@@ -191,18 +187,18 @@ a {
 }
 
 .restaurant-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
+    gap: 18px; /* Ajoute un espacement (gap) entre les cartes */
+ 
 
-    width: 100% ;
-    border: 0 solid transparent;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: none;
-    object-fit: cover;   
     @media (min-width: 768px) {
        display: grid;
        grid-template-columns: repeat(2,1fr);
        gap: 25px;
-       
-  
+
+
     }
 }
 
@@ -213,7 +209,6 @@ a {
     border-radius: 15px;
     overflow: hidden;
     position: relative; /* Ajout de position relative au conteneur */
- 
 }
  
 .card-menu img {
@@ -271,31 +266,34 @@ font-weight: 300;
 
 }
 
-.fa-regular.fa-heart {
-    position: relative;
-    left: 295px;
-    bottom: 41px;
-    font-size: 22px;
 
+.btn-like {
+    position: relative;
 }
 
+.fa-regular.fa-heart {
+    position: absolute; 
+    right: 16px; 
+    bottom: 29px;
+    font-size: 27px;
+}
 
 .fa-solid.fa-heart {
-    position: relative;
-    left: 269px;
-    bottom: 41px;
-    font-size: 22px;
+    position: absolute; 
+    right: 16px;
+    bottom: 29px;
+    font-size: 27px;
     color: transparent;
-    transition:all 500ms ease-in-out;
-
+    transition: all 500ms ease-in-out;
 }
+
 
 .btn-like:hover .fa-solid.fa-heart{
     
     background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
     background-clip: text;
     -webkit-background-clip: text;
-    transform: scale(1.4); /* Met l'élément à 150% de sa taille d'origine */
+   
 
  }
  
@@ -310,17 +308,18 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-  
+    @media (min-width: 768px)  {
+        display: flex;
+        align-items: flex-end;
+    }
 
 }
 
 .footer-container{
-    @media (min-width:768px) {
-        
-    
+ @media (min-width: 768px) {
         display: flex;
-        flex-direction: row-reverse;
-}
+    
+    }
 }
 
 .footer-title{
@@ -332,18 +331,32 @@ footer {
     font-size: 18px;
     font-weight: 400;
     margin-left: 0px;
+    @media (min-width: 768px)  {
+        order: 1;
+        margin-left: 75px;
+    }
 }
 
 
-.footer-list {
+.footer-list  {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 7px;
     padding-left: 0px;
+    @media (min-width:768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+        font-weight: 500;
+        gap: 35px;
+    }
   
 }
+
+
 
 .footer-list a {
     text-decoration: none;
