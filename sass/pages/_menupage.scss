@@ -1,15 +1,31 @@
-.body-menu-page {
+.body-menu-page,
+html {
   
-    background-color:white; /* Couleur d'arrière-plan globale */
-
-    padding: 0; /* Supprimez également la marge interne du body */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
-    justify-content: center;
-    width: 100%; /* Utilisez toute la largeur de l'écran */
-
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+    background: #f6f6f6;
+    min-width: 320px;
    }
+
+
+
+   header,
+   main{
+    display: flex;
+  flex-direction: column;
+   }
+
+.fa-solid.fa-arrow-left{
+
+    position: absolute;
+    top: 26px;
+    left: 20px
+}
+
+
+
 
 
 
@@ -20,11 +36,11 @@
     max-height: 275px;
     width: 100%;
 
-    /* Utilisez les styles pour les écrans larges (à partir de 768px) */
     @media (min-width: 768px) {
-        max-height: 60vh;
         object-fit: cover;
-        object-position: center center; /* Centrez l'image horizontalement et verticalement */
+        height: 275px;
+        width: 100%;
+        z-index: 1;
     }
 }
 
@@ -126,12 +142,11 @@
     border-radius: 15px;
     background: #F6F6F6;
     @media (min-width:768px) {
-        width: 1055px;
-        height: 1221px;
-        flex-shrink: 0;
+
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 15px;
     }
 
 }   
@@ -185,46 +200,7 @@ padding-bottom: 2px;
     }
     }
 
-   .menu-Item__confirmation {
-        background-color: $tertiary;
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        transition-duration: 0.5s;
-      }
-    
-      .menu-Item__confirmation:hover {
-        margin-right: -1rem;
-      }
-    .menu-Item__wrapIcon {
-        height: 1.6rem;
-        width: 1.6rem;
-        background-color: white;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        border-radius: 100px;
-        transform: rotate(180deg);
-        transition-duration: 0.5s;
-    
-      }
-    
-      .menu-Item__confirmation:hover  {
-        transform: rotate(0);
-      }
-    
-      .menu-Item__icon {
-        color: $color-tertiary;
-      }
-    
-    
-    @for $i from 0 to 9 {
-      .delay-#{$i} {
-        animation-delay:  #{$i/10}s;
-      }
-    }
+
 
 .button{
 display: flex;
