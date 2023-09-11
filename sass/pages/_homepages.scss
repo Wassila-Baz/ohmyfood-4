@@ -168,7 +168,7 @@
 
     
     }
-
+}
 
 a {
     text-decoration: none; /* Supprime la soulignement */
@@ -265,8 +265,6 @@ font-size: 17px;
 font-weight: 300;
 
 }
-
-
 .btn-like {
     position: relative;
 }
@@ -285,20 +283,13 @@ font-weight: 300;
     font-size: 27px;
     color: transparent;
     transition: all 500ms ease-in-out;
-    
+    transition-duration: 2000ms;
 }
 
-
-.btn-like:hover .fa-solid.fa-heart{
-    
+.btn-like:hover .fa-solid.fa-heart {
     background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
     background-clip: text;
     -webkit-background-clip: text;
-    
-   
-
- }
- 
-
+    // Ne définissez pas de transition-duration ici pour que cela utilise la valeur par défaut
 }
 

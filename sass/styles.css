@@ -16,6 +16,15 @@ header h1 {
   position: relative;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
+@media (min-width: 768px) {
+  header h1 {
+    display: flex;
+    width: 1440px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 /* LOCALISATION */
 .location {
@@ -30,7 +39,7 @@ header h1 {
   padding-left: 60px;
 }
 
-.fa-solid.fa-solid {
+.fa-solid.fa-arrow-left {
   color: #353535; /* couleur icone localisation */
 }
 
@@ -52,13 +61,15 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    width: 1440px;
+    width: 100%; /* Pour prendre toute la largeur */
   }
 }
 
 @media (min-width: 768px) {
   .footer-container {
     display: flex;
+    justify-content: space-between; /* Pour répartir les éléments horizontalement */
+    align-items: center; /* Pour aligner verticalement les éléments au centre */
   }
 }
 
@@ -75,7 +86,7 @@ footer {
 @media (min-width: 768px) {
   .footer-title {
     order: 1;
-    margin-left: 75px;
+    margin-left: 0; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
   }
 }
 
@@ -94,8 +105,6 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    display: flex;
-    font-weight: 500;
     gap: 35px;
   }
 }
@@ -278,12 +287,14 @@ footer {
     align-self: stretch;
   }
 }
-.restaurant-section a {
+
+a {
   text-decoration: none; /* Supprime la soulignement */
   outline: none; /* Supprime la bordure de focus */
   color: inherit; /* Utilise la couleur du texte environnant */
 }
-.restaurant-section .restaurant-title {
+
+.restaurant-title {
   font-family: "Roboto";
   font-size: 24px;
   padding-left: 20px;
@@ -292,27 +303,30 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-.restaurant-section .restaurant-cards {
+
+.restaurant-cards {
   width: 100%;
   display: flex;
   flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
   gap: 18px; /* Ajoute un espacement (gap) entre les cartes */
 }
 @media (min-width: 768px) {
-  .restaurant-section .restaurant-cards {
+  .restaurant-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 }
-.restaurant-section .card-menu {
+
+.card-menu {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
   position: relative; /* Ajout de position relative au conteneur */
 }
-.restaurant-section .card-menu img {
+
+.card-menu img {
   height: 12rem;
   width: 100%;
   border: 0 solid transparent;
@@ -321,7 +335,7 @@ footer {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant-section .card-badge {
+.card-badge {
   font-family: "roboto";
   position: absolute; /* Utilisation de position absolute pour le badge */
   display: flex;
@@ -338,55 +352,63 @@ footer {
   right: 0.5rem; /* À 0,5rem du bord gauche */
   top: 0.5rem; /* À 0,5rem du bord supérieur */
 }
-.restaurant-section .card-content {
+
+.card-content {
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
   padding-left: 15px;
   height: 75px;
 }
-.restaurant-section .card-content h3 {
+
+.card-content h3 {
   font-family: "roboto";
   font-size: 18px;
   font-weight: 700;
   margin-bottom: -13px;
   margin-top: 12px;
 }
-.restaurant-section .card-content p {
+
+.card-content p {
   font-family: "Roboto";
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant-section .btn-like {
+
+.btn-like {
   position: relative;
 }
-.restaurant-section .fa-regular.fa-heart {
+
+.fa-regular.fa-heart {
   position: absolute;
   right: 16px;
   bottom: 29px;
   font-size: 27px;
 }
-.restaurant-section .fa-solid.fa-heart {
+
+.fa-solid.fa-heart {
   position: absolute;
   right: 16px;
   bottom: 29px;
   font-size: 27px;
   color: transparent;
   transition: all 500ms ease-in-out;
+  transition-duration: 2000ms;
 }
-.restaurant-section .btn-like:hover .fa-solid.fa-heart {
+
+.btn-like:hover .fa-solid.fa-heart {
   background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-.body-menu-page,
+body,
 html {
   font-family: "Roboto", sans-serif;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   height: auto;
-  background: #f6f6f6;
+  background: white;
   min-width: 320px;
 }
 
@@ -394,9 +416,10 @@ header,
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.fa-solid.fa-arrow-left {
+.fa-arrow-left {
   position: absolute;
   top: 26px;
   left: 20px;
@@ -415,7 +438,6 @@ img {
        object-fit: cover;
     height: 275px;
     width: 100%;
-    z-index: 1;
   }
 }
 
@@ -436,37 +458,9 @@ img {
   }
 }
 
-.fa-regular.fa-heart {
-  position: absolute;
-  right: 16px;
-  bottom: 29px;
-  font-size: 27px;
-}
-@media (min-width: 768px) {
-  .fa-regular.fa-heart {
-    position: relative;
-    left: 24px;
-    bottom: 0;
-  }
-}
-
-.fa-solid.fa-heart {
-  position: absolute;
-  right: 16px;
-  bottom: 29px;
-  font-size: 27px;
-  color: transparent;
-  transition: all 500ms ease-in-out;
-}
-
-.btn-like:hover .fa-solid.fa-heart {
-  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 .title-menu {
   padding-top: 40px;
+  margin-left: 15px;
   font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
@@ -475,28 +469,6 @@ img {
   .title-menu {
     padding-top: 0;
   }
-}
-
-.fa-regular.fa-heart {
-  position: absolute;
-  right: 16px;
-  bottom: 29px;
-  font-size: 27px;
-}
-
-.fa-solid.fa-heart {
-  position: absolute;
-  right: 16px;
-  bottom: 29px;
-  font-size: 27px;
-  color: transparent;
-  transition: all 500ms ease-in-out;
-}
-
-.btn-like:hover .fa-solid.fa-heart {
-  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .container-menu {
@@ -508,10 +480,14 @@ img {
 }
 @media (min-width: 768px) {
   .container-menu {
+    width: 1055px;
+    height: 1137px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
+    justify-content: center;
+    border-radius: 40px;
   }
 }
 
@@ -558,6 +534,69 @@ h4 {
   }
 }
 
+.item-price {
+  position: relative;
+  bottom: 36px;
+  left: 326px;
+  font-size: 15.043px;
+  font-weight: 700;
+  color: #353535;
+}
+@media (min-width: 768px) {
+  .item-price {
+    left: 600px;
+  }
+}
+
+.menu-item {
+  /* Vos styles actuels pour .menu-item */
+  position: relative;
+  overflow: hidden;
+}
+
+.item-price {
+  transition: transform 0.3s ease-in-out;
+}
+
+.confirmation {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  width: 69px;
+  height: 78px;
+  background-color: #99E2D0;
+  border-top-right-radius: 0; /* Pas de bord arrondi en haut à droite */
+  border-bottom-right-radius: 0.75rem; /* Bord arrondi en bas à droite */
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.confirmation-icone {
+  position: absolute;
+  top: 40%; /* Positionnez verticalement au centre */
+  right: 25px; /* Ajustez la valeur pour le positionnement horizontal */
+  transform: translateY(-50%) rotate(5deg); /* Légère rotation et déplacement vers le bas */
+  transition: transform 0.3s ease-in-out;
+  color: #F6F6F6;
+}
+
+.menu-item:hover .confirmation {
+  transform: translateX(0);
+  opacity: 1;
+  border-right: 3px solid #99E2D0;
+}
+
+.menu-item:hover .item-price {
+  transform: translateX(-65px);
+}
+
+.menu-item:hover .confirmation-icone {
+  transform: translateY(0) rotate(0deg); /* Annulez la rotation et le déplacement au survol */
+}
+
+/* animation*/
 .button {
   display: flex;
 }

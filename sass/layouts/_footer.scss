@@ -6,22 +6,20 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    @media (min-width: 768px)  {
-        width: 1440px;
-
-      
+    @media (min-width: 768px) {
+        width: 100%; /* Pour prendre toute la largeur */
     }
-
 }
 
-.footer-container{
- @media (min-width: 768px) {
+.footer-container {
+    @media (min-width: 768px) {
         display: flex;
-
+        justify-content: space-between; /* Pour répartir les éléments horizontalement */
+        align-items: center; /* Pour aligner verticalement les éléments au centre */
     }
 }
 
-.footer-title{
+.footer-title {
     font-family: 'shrikhand', sans-serif;
     width: 139px;
     height: 27px;
@@ -30,15 +28,13 @@ footer {
     font-size: 18px;
     font-weight: 400;
     margin-left: 0px;
-    @media (min-width: 768px)  {
+    @media (min-width: 768px) {
         order: 1;
-        margin-left: 75px;
+        margin-left: 0; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
     }
 }
 
-
-.footer-list  {
-
+.footer-list {
     font-family: "Roboto";
     font-weight: 500;
     list-style-type: none;
@@ -47,23 +43,19 @@ footer {
     align-items: flex-start;
     gap: 7px;
     padding-left: 0px;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        display: flex;
-        font-weight: 500;
         gap: 35px;
     }
-  
 }
-
-
 
 .footer-list a {
     text-decoration: none;
     color: var(--white, #FFF);
 }
+
 /*icones*/
 .fa-solid.fa-utensils,
 .fa-solid.fa-handshake-angle {
