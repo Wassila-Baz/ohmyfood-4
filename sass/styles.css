@@ -62,6 +62,8 @@ footer {
 @media (min-width: 768px) {
   footer {
     width: 100%; /* Pour prendre toute la largeur */
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -86,7 +88,8 @@ footer {
 @media (min-width: 768px) {
   .footer-title {
     order: 1;
-    margin-left: 0; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+    margin-left: 65px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+    margin-top: 25px;
   }
 }
 
@@ -106,6 +109,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     gap: 35px;
+    margin-top: 29px;
   }
 }
 
@@ -596,7 +600,6 @@ h4 {
   transform: translateY(0) rotate(0deg); /* Annulez la rotation et le déplacement au survol */
 }
 
-/* animation*/
 .button {
   display: flex;
 }
@@ -628,6 +631,116 @@ h4 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+/* Votre CSS existant */
+/* Ajoutez ceci pour le loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 2.5s ease-in-out 0.5s forwards;
+  pointer-events: none; /* Ajoutez cette ligne */
+}
+
+.ball-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.5s alternate infinite;
+}
+
+.loader-ball-1 {
+  background-color: #9356DC;
+  animation-delay: 0.1s;
+}
+
+.loader-ball-2 {
+  background-color: #FF79DA;
+  animation-delay: 0.2s;
+}
+
+.loader-ball-3 {
+  background-color: #99E2D0;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/*page  de menu qui arrievent progressivement*/
+/* Animation pour chaque groupe */
+.menu-group {
+  opacity: 0;
+  animation: fadeInGroup 0.5s ease-in-out forwards;
+}
+
+/* Décalage entre les groupes */
+.entrance {
+  animation-delay: 0.3s;
+}
+
+.main-course {
+  animation-delay: 0.6s;
+}
+
+.dessert {
+  animation-delay: 0.9s;
+}
+
+/* Animation de fade-in pour chaque élément du groupe */
+.menu-item {
+  animation: fadeInSection 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInGroup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*LOCALISATION*/
 .location {
   background: #EAEAEA;

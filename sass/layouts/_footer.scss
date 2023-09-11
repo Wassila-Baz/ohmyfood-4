@@ -8,6 +8,8 @@ footer {
     gap: 16px;
     @media (min-width: 768px) {
         width: 100%; /* Pour prendre toute la largeur */
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -30,7 +32,8 @@ footer {
     margin-left: 0px;
     @media (min-width: 768px) {
         order: 1;
-        margin-left: 0; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+        margin-left: 65px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+        margin-top: 25px;
     }
 }
 
@@ -48,6 +51,7 @@ footer {
         align-items: center;
         justify-content: flex-end;
         gap: 35px;
+        margin-top: 29px;
     }
 }
 
