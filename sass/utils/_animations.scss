@@ -72,7 +72,7 @@
 
 /*page  de menu qui arrievent progressivement*/
 
-/* Animation pour chaque groupe */
+/* Animation d'entrée pour chaque groupe de menu */
 .menu-group {
     opacity: 0;
     animation: fadeInGroup 0.5s ease-in-out forwards;
@@ -80,32 +80,24 @@
 
 /* Décalage entre les groupes */
 .entrance {
-    animation-delay: 0.3s;
+    animation-delay: 3s;
 }
 
-.main-course {
-    animation-delay: 0.6s;
+.main-course.entrance {
+    animation-delay: 6s; /* Décalage pour le groupe de plats */
 }
 
-.dessert {
-    animation-delay: 0.9s;
+.dessert.entrance {
+    animation-delay: 9s; /* Décalage pour le groupe de desserts */
 }
 
-/* Animation de fade-in pour chaque élément du groupe */
+/* Animation de fade-in pour chaque élément du menu */
 .menu-item {
     animation: fadeInSection 0.5s ease-in-out forwards;
 }
 
+/* Animation d'entrée pour le groupe de menu */
 @keyframes fadeInGroup {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInSection {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -115,7 +107,4 @@
         transform: translateY(0);
     }
 }
-
-
-
 

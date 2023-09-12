@@ -165,7 +165,7 @@
     align-items: flex-start;
     gap: 28px;
     align-self: stretch;
-
+padding: 0px 120px;
     
     }
 }
@@ -190,17 +190,25 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
-    gap: 18px; /* Ajoute un espacement (gap) entre les cartes */
- 
+    gap: 50px; /* Ajoute un espacement (gap) entre les cartes */
 
     @media (min-width: 768px) {
-       display: grid;
-       grid-template-columns: repeat(2,1fr);
-       gap: 25px;
-
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
+
+/* Ajoutez cette règle CSS pour la marge en bas de chaque carte, sauf la dernière */
+.restaurant-card {
+    margin-bottom: 18px; /* Espacement entre les cartes */
+}
+
+/* Supprimez la marge en bas de la dernière carte */
+.restaurant-card:last-child {
+    margin-bottom: 0; /* Aucun espacement en bas de la dernière carte */
+}
+
 
 
 .card-menu {
