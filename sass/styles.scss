@@ -1,6 +1,6 @@
-
-@import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/variables";
+
 
 @import "./layouts/header";
 @import "./layouts/footer";
@@ -11,3 +11,5 @@
 
 @import "./base/location";
 @import "./base/normalize";
+
+@import "./components/buttons";

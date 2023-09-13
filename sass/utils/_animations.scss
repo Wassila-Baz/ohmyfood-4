@@ -108,3 +108,19 @@
     }
 }
 
+
+
+
+/* coeurs*/
+// Animation au survol, progressivement
+@mixin heart-icon-hover {
+    &:hover {
+        .heart__icon--full {
+            opacity: 1;
+        }
+        
+        .heart__icon--empty {
+            opacity: 0;
+        }
+    }
+}

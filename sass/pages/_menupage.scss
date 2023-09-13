@@ -1,3 +1,7 @@
+@import "_mixins.scss";
+@import "_animations.scss";
+
+
 body,
 html{
     font-family: "Roboto", sans-serif;
@@ -71,16 +75,29 @@ html{
     
 }
 
+.heart__icon {
 
-.container-menu { 
+@media (min-width:768px) {
+    left: 45px;
+    top: -3px;
+}
+}
 
-    font-family:"roboto";
-    position: relative;
-    bottom:80px;
+
+
+.container-menu {
+    font-family: "roboto";
     border-radius: 15px;
     background: #F6F6F6;
+    position: relative;
+    top: -35px;
+    width: 414px;
+    height: 1307px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  
     
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         width: 1055px;
         height: 1137px;
         flex-shrink: 0;
@@ -88,10 +105,12 @@ html{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
         border-radius: 40px;
+        margin: 0 auto; 
+
     }
-}   
+}
+  
 
 .menu-item {
     margin: 15px;
