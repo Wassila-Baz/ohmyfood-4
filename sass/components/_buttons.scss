@@ -30,3 +30,48 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
+
+
+
+
+/*COEURS*/
+
+
+.heart__icon {
+   
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+        left: 91%;
+        top: -35px;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+     
+}
+
+/* cœur vide */
+.heart__icon--empty {
+    position: absolute;
+    color: black;
+}
+
+/* cœur rempli */
+.heart__icon--full {
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: opacity 800ms ease-in-out; 
+}
+/* Au survol, progressivement  */
+.heart__icon:hover .heart__icon--full {
+    opacity: 1;
+}
+
+.heart__icon:hover .heart__icon--empty {
+    opacity: 1;
+}
