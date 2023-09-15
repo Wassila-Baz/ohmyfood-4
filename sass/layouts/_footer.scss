@@ -32,7 +32,7 @@ footer {
     margin-left: 0px;
     @media (min-width: 768px) {
         order: 1;
-        margin-left: 65px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+        margin-left: 46px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
         margin-top: 25px;
     }
 }
@@ -50,7 +50,7 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        gap: 35px;
+        gap: 21px;
         margin-top: 29px;
     }
 }

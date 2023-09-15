@@ -1,6 +1,5 @@
-/* Votre CSS existant */
 
-/* Ajoutez ceci pour le loader */
+/*LOADER*/
 .loader-container {
     position: fixed;
     top: 0;
@@ -11,9 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
     animation: fadeIn 0.5s ease-in-out, fadeOut 2.5s ease-in-out 0.5s forwards;
-    pointer-events: none; /* Ajoutez cette ligne */
+    pointer-events: none; 
+    z-index: 9999;
 }
 
 
@@ -24,8 +23,8 @@
 }
 
 .loader-ball {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     margin: 0 5px;
     animation: bounce 0.5s alternate infinite;
@@ -70,49 +69,52 @@
     }
 }
 
-/*page  de menu qui arrievent progressivement*/
+/*page  de menu qui arrive progressivement*/
 
-/* Animation d'entrée pour chaque groupe de menu */
-.menu-group {
-    opacity: 0;
-    animation: fadeInGroup 0.5s ease-in-out forwards;
-}
 
-/* Décalage entre les groupes */
-.entrance {
-    animation-delay: 3s;
-}
+/*COEURS*/
 
-.main-course.entrance {
-    animation-delay: 6s; /* Décalage pour le groupe de plats */
-}
 
-.dessert.entrance {
-    animation-delay: 9s; /* Décalage pour le groupe de desserts */
-}
-
-/* Animation de fade-in pour chaque élément du menu */
-.menu-item {
-    animation: fadeInSection 0.5s ease-in-out forwards;
-}
-
-/* Animation d'entrée pour le groupe de menu */
-@keyframes fadeInGroup {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.heart__icon {
+   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    left: 91%;
+    top: -35px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+ 
 }
 
 
+/* cœur vide */
+.heart__icon--empty {
+position: absolute;
 
+}
 
-/* coeurs*/
-// Animation au survol, progressivement
+/* cœur rempli */
+.heart__icon--full {
+position: absolute;
+opacity: 0;
+background: linear-gradient($cd-btn-start, $cd-btn-end);
+background-clip: text;
+color: transparent;
+transition: opacity 800ms ; 
+}  
+
+/* Au survol, progressivement */
+.heart__icon:hover .heart__icon--full {
+opacity: 1;
+}
+
+.heart__icon:hover .heart__icon--empty {
+opacity: 1;
+}
+
 @mixin heart-icon-hover {
     &:hover {
         .heart__icon--full {

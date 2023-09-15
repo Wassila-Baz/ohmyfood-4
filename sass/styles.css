@@ -86,7 +86,7 @@ footer {
 @media (min-width: 768px) {
   .footer-title {
     order: 1;
-    margin-left: 65px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+    margin-left: 46px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
     margin-top: 25px;
   }
 }
@@ -106,7 +106,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 35px;
+    gap: 21px;
     margin-top: 29px;
   }
 }
@@ -318,6 +318,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem 5rem;
+    padding-bottom: 30px;
   }
 }
 
@@ -337,6 +338,11 @@ a {
   border-radius: 15px;
   overflow: hidden;
   position: relative; /* Ajout de position relative au conteneur */
+}
+@media (min-width: 768px) {
+  .card-menu {
+    margin-top: -15px;
+  }
 }
 
 .card-menu img {
@@ -414,14 +420,14 @@ img {
   position: relative;
   top: 0;
   min-width: 100%;
-  max-height: 275px;
+  height: 275px;
   width: 100%;
 }
 @media (min-width: 768px) {
   img {
     -o-object-fit: cover;
        object-fit: cover;
-    height: 275px;
+    height: 471px;
     width: 100%;
   }
 }
@@ -449,13 +455,19 @@ img {
   font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+  position: relative; /* Conservez cette ligne */
 }
+
 @media (min-width: 768px) {
   .title-menu {
     padding-top: 0;
   }
+  .heart__icon span {
+    position: absolute;
+    left: -245px;
+    top: 13px;
+  }
 }
-
 .container-menu {
   font-family: "roboto";
   border-radius: 15px;
@@ -466,6 +478,7 @@ img {
   height: 1307px;
   flex-shrink: 0;
   margin: 0 auto;
+  margin-bottom: -35px;
 }
 @media (min-width: 768px) {
   .container-menu {
@@ -617,8 +630,52 @@ h4 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/* Votre CSS existant */
-/* Ajoutez ceci pour le loader */
+/* Entrées */
+.menu.entrance.animate-section {
+  animation: fade-in 0.3s ease 0.5s both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Plats */
+.dish {
+  animation: fade-in 1s ease 0.5s both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Plats */
+.dessert {
+  animation: fade-in 2s ease 0.5s both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*LOADER*/
 .loader-container {
   position: fixed;
   top: 0;
@@ -629,9 +686,9 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
   animation: fadeIn 0.5s ease-in-out, fadeOut 2.5s ease-in-out 0.5s forwards;
-  pointer-events: none; /* Ajoutez cette ligne */
+  pointer-events: none;
+  z-index: 9999;
 }
 
 .ball-container {
@@ -641,8 +698,8 @@ h4 {
 }
 
 .loader-ball {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin: 0 5px;
   animation: bounce 0.5s alternate infinite;
@@ -684,42 +741,45 @@ h4 {
     transform: translateY(-20px);
   }
 }
-/*page  de menu qui arrievent progressivement*/
-/* Animation d'entrée pour chaque groupe de menu */
-.menu-group {
+/*page  de menu qui arrive progressivement*/
+/*COEURS*/
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  left: 91%;
+  top: -35px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+/* cœur vide */
+.heart__icon--empty {
+  position: absolute;
+}
+
+/* cœur rempli */
+.heart__icon--full {
+  position: absolute;
   opacity: 0;
-  animation: fadeInGroup 0.5s ease-in-out forwards;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: opacity 800ms;
 }
 
-/* Décalage entre les groupes */
-.entrance {
-  animation-delay: 3s;
+/* Au survol, progressivement */
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
 }
 
-.main-course.entrance {
-  animation-delay: 6s; /* Décalage pour le groupe de plats */
+.heart__icon:hover .heart__icon--empty {
+  opacity: 1;
 }
 
-.dessert.entrance {
-  animation-delay: 9s; /* Décalage pour le groupe de desserts */
-}
-
-/* Animation de fade-in pour chaque élément du menu */
-.menu-item {
-  animation: fadeInSection 0.5s ease-in-out forwards;
-}
-
-/* Animation d'entrée pour le groupe de menu */
-@keyframes fadeInGroup {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /*LOCALISATION*/
 .location {
   background: #EAEAEA;
@@ -730,7 +790,7 @@ h4 {
   align-items: center;
   gap: 17px;
   flex-shrink: 0;
-  padding-left: 60px;
+  padding-left: 95px;
 }
 
 .location .fa-solid {
@@ -750,6 +810,8 @@ body {
 
 .button {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .button {
@@ -764,55 +826,17 @@ body {
   width: 218px;
   height: 50px;
   color: white;
-  border: none; /* Supprime la bordure par défaut */
+  border: none;
   border-radius: 25px;
   font-size: 16px;
   font-weight: 500;
   background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  outline: none; /* Supprime le contour lorsqu'il est en focus */
+  outline: none;
 }
 
 .btn-gradient:hover {
   border-radius: 25px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-}
-
-.heart__icon {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 40px;
-  left: 91%;
-  top: -35px;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-}
-
-/* cœur vide */
-.heart__icon--empty {
-  position: absolute;
-  color: black;
-}
-
-/* cœur rempli */
-.heart__icon--full {
-  position: absolute;
-  opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: opacity 800ms ease-in-out;
-}
-
-/* Au survol, progressivement  */
-.heart__icon:hover .heart__icon--full {
-  opacity: 1;
-}
-
-.heart__icon:hover .heart__icon--empty {
-  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */
