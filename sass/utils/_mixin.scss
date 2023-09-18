@@ -1,0 +1,23 @@
+
+
+@mixin heart-icon-hover {
+    .heart__icon {
+        position: absolute;
+        
+        &--empty,
+        &--full {
+            opacity: 0;
+            transition: opacity 800ms;
+        }
+        
+        &:hover {
+            &--full {
+                opacity: 1;
+            }
+            
+            &--empty {
+                opacity: 0;
+            }
+        }
+    }
+}

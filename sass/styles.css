@@ -289,8 +289,8 @@ a {
 .restaurant-cards {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 50px;
+  flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
+  gap: 50px; /* Ajoute un espacement (gap) entre les cartes */
 }
 @media (min-width: 768px) {
   .restaurant-cards {
@@ -301,12 +301,14 @@ a {
   }
 }
 
+/* Ajoutez cette règle CSS pour la marge en bas de chaque carte, sauf la dernière */
 .restaurant-card {
-  margin-bottom: 18px;
+  margin-bottom: 18px; /* Espacement entre les cartes */
 }
 
+/* Supprimez la marge en bas de la dernière carte */
 .restaurant-card:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Aucun espacement en bas de la dernière carte */
 }
 
 .card-menu {
@@ -314,7 +316,7 @@ a {
   flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
+  position: relative; /* Ajout de position relative au conteneur */
 }
 @media (min-width: 768px) {
   .card-menu {
@@ -331,7 +333,6 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .card-badge {
   font-family: "roboto";
   position: absolute; /* Utilisation de position absolute pour le badge */
@@ -370,6 +371,12 @@ a {
   font-family: "Roboto";
   font-size: 17px;
   font-weight: 300;
+}
+
+.heart_card {
+  position: absolute;
+  top: 215px;
+  left: 414px;
 }
 
 /* Styles de base */
@@ -590,6 +597,25 @@ h4 {
   }
 }
 
+.btn-gradient {
+  margin: 20px 40px 40px 40px;
+  width: 218px;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+.btn-gradient:hover {
+  border-radius: 25px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
 /* Styles pour les animations d'entrée, plats et dessert */
 .menu.entrance.animate-section,
 .dish,
@@ -676,37 +702,38 @@ h4 {
 /*page  de menu qui arrive progressivement*/
 /*COEURS*/
 .heart__icon {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 40px;
-  left: 340px;
-  top: 54px;
+  left: 66px;
+  top: -3px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  /* cœur vide */
-  /* cœur rempli */
-  /* Au survol, progressivement */
 }
 @media (min-width: 768px) {
   .heart__icon {
-    left: 75px;
-    top: -2px;
+    left: 283px;
+    top: -30px;
     position: relative;
   }
 }
 @media (min-width: 1024px) {
   .heart__icon {
-    left: 75px;
-    top: -2px;
-    position: relative;
+    left: 548px;
+    top: 59px;
+    position: absolute;
   }
 }
-.heart__icon .heart__icon--empty {
+
+/* cœur vide */
+.heart__icon--empty {
   position: absolute;
 }
-.heart__icon .heart__icon--full {
+
+/* cœur rempli */
+.heart__icon--full {
   position: absolute;
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
@@ -715,10 +742,13 @@ h4 {
   color: transparent;
   transition: opacity 800ms;
 }
-.heart__icon .heart__icon:hover .heart__icon--full {
+
+/* Au survol, progressivement */
+.heart__icon:hover .heart__icon--full {
   opacity: 1;
 }
-.heart__icon .heart__icon:hover .heart__icon--empty {
+
+.heart__icon:hover .heart__icon--empty {
   opacity: 1;
 }
 

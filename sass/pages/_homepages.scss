@@ -59,7 +59,7 @@
             height: 72.379px;
             gap: 29px;
         }
-        }
+     }
     &-section li {
         color: #000;
         font-family: "Roboto";
@@ -140,7 +140,7 @@
     align-items: flex-start;
     gap: 28px;
     align-self: stretch;
-padding: 0px 120px;
+    padding: 0px 120px;
 
     
     }
@@ -254,5 +254,13 @@ a {
 font-family: "Roboto";
 font-size: 17px;
 font-weight: 300;
+
+}
+
+.heart_card{
+
+    position: absolute;
+    top: 215px;
+    left: 414px;
 
 }
