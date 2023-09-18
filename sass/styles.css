@@ -59,7 +59,7 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    width: 100%; /* Pour prendre toute la largeur */
+    width: 97%; /* Pour prendre toute la largeur */
     display: flex;
     align-items: flex-end;
   }
@@ -145,27 +145,6 @@ footer {
   line-height: normal;
 }
 
-/* Bouton Gradient */
-.btn-gradient {
-  width: 218px;
-  height: 50px;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 500;
-  background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  margin-bottom: 50px;
-  outline: none;
-}
-
-.btn-gradient:hover {
-  border-radius: 25px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-}
-
 /*SECTION FONCTIONNEMENT*/
 .functioning {
   padding-bottom: 30px;
@@ -196,7 +175,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 33%;
+    width: 30%;
     height: 72.379px;
     gap: 29px;
   }
@@ -310,8 +289,8 @@ a {
 .restaurant-cards {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
-  gap: 50px; /* Ajoute un espacement (gap) entre les cartes */
+  flex-direction: column;
+  gap: 50px;
 }
 @media (min-width: 768px) {
   .restaurant-cards {
@@ -322,14 +301,12 @@ a {
   }
 }
 
-/* Ajoutez cette règle CSS pour la marge en bas de chaque carte, sauf la dernière */
 .restaurant-card {
-  margin-bottom: 18px; /* Espacement entre les cartes */
+  margin-bottom: 18px;
 }
 
-/* Supprimez la marge en bas de la dernière carte */
 .restaurant-card:last-child {
-  margin-bottom: 0; /* Aucun espacement en bas de la dernière carte */
+  margin-bottom: 0;
 }
 
 .card-menu {
@@ -337,7 +314,7 @@ a {
   flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
-  position: relative; /* Ajout de position relative au conteneur */
+  position: relative;
 }
 @media (min-width: 768px) {
   .card-menu {
@@ -354,6 +331,7 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .card-badge {
   font-family: "roboto";
   position: absolute; /* Utilisation de position absolute pour le badge */
@@ -394,8 +372,8 @@ a {
   font-weight: 300;
 }
 
-body,
-html {
+/* Styles de base */
+body, html {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
@@ -404,34 +382,37 @@ html {
   min-width: 320px;
 }
 
-header,
-main {
+/* Styles pour le header et le main */
+header, main {
   flex-direction: column;
   align-items: center;
 }
 
+/* Styles pour la flèche gauche */
 .fa-arrow-left {
   position: absolute;
   top: 26px;
   left: 20px;
 }
 
+/* Styles pour les images */
 img {
   position: relative;
   top: 0;
   min-width: 100%;
   height: 275px;
   width: 100%;
+  display: block;
 }
 @media (min-width: 768px) {
   img {
     -o-object-fit: cover;
        object-fit: cover;
     height: 471px;
-    width: 100%;
   }
 }
 
+/* Styles pour le titre */
 .title {
   font-family: "Shrikhand";
   font-size: 18px;
@@ -442,65 +423,69 @@ img {
 }
 @media (min-width: 768px) {
   .title {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 51px 400px 0 353px;
   }
 }
 
+/* Styles pour le titre du menu */
 .title-menu {
   padding-top: 40px;
   margin-left: 15px;
   font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
-  position: relative; /* Conservez cette ligne */
+  position: relative;
 }
-
 @media (min-width: 768px) {
   .title-menu {
     padding-top: 0;
   }
-  .heart__icon span {
-    position: absolute;
-    left: -245px;
-    top: 13px;
-  }
 }
+.title-menu .heart__icon span {
+  position: absolute;
+  left: -245px;
+  top: 13px;
+}
+
+/* Styles pour le conteneur du menu */
 .container-menu {
-  font-family: "roboto";
-  border-radius: 15px;
-  background: #F6F6F6;
+  background-color: #F6F6F6;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-top: -50px;
+  z-index: 20;
   position: relative;
-  top: -35px;
-  width: 414px;
-  height: 1307px;
-  flex-shrink: 0;
-  margin: 0 auto;
-  margin-bottom: -35px;
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
 }
 @media (min-width: 768px) {
   .container-menu {
-    width: 1055px;
-    height: 1137px;
-    flex-shrink: 0;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
+    border-radius: 40px 40px 0px 0px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .container-menu {
+    max-width: 768px;
     margin: 0 auto;
+    margin-top: -50px;
   }
 }
 
+/* Styles pour les éléments de menu */
 .menu-item {
   margin: 15px;
   padding: 15px;
-  width: 349px;
+  max-width: 90%;
   height: 40px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
+  position: relative;
+  overflow: hidden;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 768px) {
@@ -510,81 +495,75 @@ img {
   }
 }
 
+/* Styles pour les titres des éléments de menu */
 h4 {
-  margin: 0px 0 5px 15px;
+  margin: 0 0 5px 15px;
   font-size: 18px;
   font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+/* Styles pour les descriptions des éléments de menu */
 .menu-item > p {
   font-size: 15.043px;
   font-weight: 300;
   margin-top: 5px;
   margin-left: 15px;
   padding-bottom: 2px;
-}
-
-.item-price {
-  position: relative;
-  bottom: 36px;
-  left: 326px;
-  font-size: 15.043px;
-  font-weight: 700;
-  color: #353535;
-}
-@media (min-width: 768px) {
-  .item-price {
-    left: 600px;
-  }
-}
-
-.item-price {
-  position: relative;
-  bottom: 36px;
-  left: 326px;
-  font-size: 15.043px;
-  font-weight: 700;
-  color: #353535;
-}
-@media (min-width: 768px) {
-  .item-price {
-    left: 600px;
-  }
-}
-
-.menu-item {
-  /* Vos styles actuels pour .menu-item */
-  position: relative;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* Styles pour les prix des éléments de menu */
 .item-price {
-  transition: transform 0.3s ease-in-out;
+  position: relative;
+  bottom: 36px;
+  font-size: 15.043px;
+  font-weight: 700;
+  color: #353535;
+  left: 92%;
+  transition: transform 0.5s ease-in-out;
+  margin-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .item-price {
+    left: 600px;
+  }
 }
 
+/* Styles pour la confirmation au survol */
 .confirmation {
   position: absolute;
   top: -2px;
-  right: 0px;
+  right: 0;
   width: 69px;
   height: 78px;
   background-color: #99E2D0;
-  border-top-right-radius: 0; /* Pas de bord arrondi en haut à droite */
-  border-bottom-right-radius: 0.75rem; /* Bord arrondi en bas à droite */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.75rem;
   transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 1;
 }
 
 .confirmation-icone {
   position: absolute;
-  top: 40%; /* Positionnez verticalement au centre */
-  right: 25px; /* Ajustez la valeur pour le positionnement horizontal */
-  transform: translateY(-50%) rotate(5deg); /* Légère rotation et déplacement vers le bas */
-  transition: transform 0.3s ease-in-out;
+  top: 40%;
+  right: 25px;
+  transform: translateY(-50%) rotate(5deg);
+  transition: transform 0.5s ease-in-out;
   color: #F6F6F6;
 }
 
+/* Styles au survol des éléments de menu */
 .menu-item:hover .confirmation {
   transform: translateX(0);
   opacity: 1;
@@ -596,73 +575,26 @@ h4 {
 }
 
 .menu-item:hover .confirmation-icone {
-  transform: translateY(0) rotate(0deg); /* Annulez la rotation et le déplacement au survol */
+  transform: translateY(0) rotate(360deg);
+  transition-duration: 0.5s;
 }
 
+/* Styles pour les boutons */
 .button {
   display: flex;
 }
 @media (min-width: 768px) {
   .button {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
 
-.btn-gradient {
-  margin: 20px 40px 40px 40px;
-  width: 218px;
-  height: 50px;
-  color: white;
-  border: none; /* Supprime la bordure par défaut */
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 500;
-  background: var(--button-gradient, linear-gradient(175deg, #FF79DA 0%, #9356DC 100%));
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  outline: none; /* Supprime le contour lorsqu'il est en focus */
-}
-
-.btn-gradient:hover {
-  border-radius: 25px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-}
-
-/* Entrées */
-.menu.entrance.animate-section {
-  animation: fade-in 0.3s ease 0.5s both;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Plats */
-.dish {
-  animation: fade-in 1s ease 0.5s both;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Plats */
+/* Styles pour les animations d'entrée, plats et dessert */
+.menu.entrance.animate-section,
+.dish,
 .dessert {
-  animation: fade-in 2s ease 0.5s both;
+  animation: fade-in 0.3s ease 0.5s both;
 }
 
 @keyframes fade-in {
@@ -744,24 +676,37 @@ h4 {
 /*page  de menu qui arrive progressivement*/
 /*COEURS*/
 .heart__icon {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 40px;
-  left: 91%;
-  top: -35px;
+  left: 340px;
+  top: 54px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
+  /* cœur vide */
+  /* cœur rempli */
+  /* Au survol, progressivement */
 }
-
-/* cœur vide */
-.heart__icon--empty {
+@media (min-width: 768px) {
+  .heart__icon {
+    left: 75px;
+    top: -2px;
+    position: relative;
+  }
+}
+@media (min-width: 1024px) {
+  .heart__icon {
+    left: 75px;
+    top: -2px;
+    position: relative;
+  }
+}
+.heart__icon .heart__icon--empty {
   position: absolute;
 }
-
-/* cœur rempli */
-.heart__icon--full {
+.heart__icon .heart__icon--full {
   position: absolute;
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
@@ -770,13 +715,10 @@ h4 {
   color: transparent;
   transition: opacity 800ms;
 }
-
-/* Au survol, progressivement */
-.heart__icon:hover .heart__icon--full {
+.heart__icon .heart__icon:hover .heart__icon--full {
   opacity: 1;
 }
-
-.heart__icon:hover .heart__icon--empty {
+.heart__icon .heart__icon:hover .heart__icon--empty {
   opacity: 1;
 }
 

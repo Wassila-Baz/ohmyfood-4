@@ -77,17 +77,30 @@
 
 .heart__icon {
    
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 40px;
-    left: 91%;
-    top: -35px;
+    left: 340px;
+    top: 54px;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
- 
-}
+  @media (min-width:768px) {
+    left: 283px;
+    top: -30px;
+    position: relative;
+
+  
+  }
+  @media (min-width:1024px) {
+    left: 283px;
+    top: -30px;
+    position: relative;
+
+    }
+  }
+
 
 
 /* cœur vide */
@@ -126,3 +139,4 @@ opacity: 1;
         }
     }
 }
+
