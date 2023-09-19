@@ -72,7 +72,7 @@
 /*page  de menu qui arrive progressivement*/
 
 
-/*COEURS*/
+/*COEURS droite des titres*/
 
 
 .heart__icon  {
@@ -82,14 +82,14 @@
     justify-content: center;
     align-items: center;
     margin-right: 40px;
-    left: 66px;
+    left: 1%;
     top: -3px;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
   @media (min-width:768px) {
-    left: 283px;
-    top: -30px;
-    position: relative;
+    left: 70%;
+    top: 59px;
+    position: absolute;
 
   
   }

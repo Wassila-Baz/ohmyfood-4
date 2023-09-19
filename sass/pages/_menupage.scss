@@ -172,6 +172,9 @@ h4 {
     opacity: 1;
     transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .confirmation-icone {
@@ -230,11 +233,17 @@ h4 {
     }
 }
 
-/* Styles pour les animations d'entrée, plats et dessert */
-.menu.entrance.animate-section,
-.dish,
+/* Styles pour les animations d'entrée, plat et dessert */
+.menu.entrance.animate-section {
+    animation: fade-in 0.4s ease 0.5s both;
+}
+
+.dish {
+    animation: fade-in 0.4s ease 0.7s both; /* Ajustez le délai ici */
+}
+
 .dessert {
-    animation: fade-in 0.3s ease 0.5s both;
+    animation: fade-in 0.4s ease 0.9s both; /* Ajustez le délai ici */
 }
 
 @keyframes fade-in {

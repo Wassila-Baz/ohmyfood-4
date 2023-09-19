@@ -352,6 +352,7 @@ a {
 }
 
 .card-content {
+  position: relative;
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
@@ -376,7 +377,34 @@ a {
 .heart_card {
   position: absolute;
   top: 215px;
-  left: 414px;
+  left: 80%;
+}
+
+/* Coeur vide dans .heart_card */
+.heart_card .heart__icon--empty {
+  position: absolute;
+  transition: opacity 800ms;
+  opacity: 1; /* Assurez-vous que l'opacité est initialement définie à 1 pour qu'il soit visible */
+}
+
+/* Coeur rempli dans .heart_card */
+.heart_card .heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: opacity 800ms;
+}
+
+/* Au survol de .heart_card, progressivement */
+.heart_card:hover .heart__icon--empty {
+  opacity: 0; /* L'opacité devient 0 au survol */
+}
+
+.heart_card:hover .heart__icon--full {
+  opacity: 1; /* L'opacité devient 1 au survol */
 }
 
 /* Styles de base */
@@ -559,6 +587,8 @@ h4 {
   opacity: 1;
   transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .confirmation-icone {
@@ -616,11 +646,17 @@ h4 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/* Styles pour les animations d'entrée, plats et dessert */
-.menu.entrance.animate-section,
-.dish,
+/* Styles pour les animations d'entrée, plat et dessert */
+.menu.entrance.animate-section {
+  animation: fade-in 0.4s ease 0.5s both;
+}
+
+.dish {
+  animation: fade-in 0.4s ease 0.7s both; /* Ajustez le délai ici */
+}
+
 .dessert {
-  animation: fade-in 0.3s ease 0.5s both;
+  animation: fade-in 0.4s ease 0.9s both; /* Ajustez le délai ici */
 }
 
 @keyframes fade-in {
@@ -700,23 +736,23 @@ h4 {
   }
 }
 /*page  de menu qui arrive progressivement*/
-/*COEURS*/
+/*COEURS droite des titres*/
 .heart__icon {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 40px;
-  left: 66px;
+  left: 1%;
   top: -3px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .heart__icon {
-    left: 283px;
-    top: -30px;
-    position: relative;
+    left: 70%;
+    top: 59px;
+    position: absolute;
   }
 }
 @media (min-width: 1024px) {

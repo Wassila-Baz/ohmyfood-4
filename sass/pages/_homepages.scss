@@ -234,6 +234,7 @@ a {
 }
 
 .card-content {
+    position: relative;
     background: #FFF;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 0 0 15px 15px;
@@ -261,6 +262,30 @@ font-weight: 300;
 
     position: absolute;
     top: 215px;
-    left: 414px;
+    left: 80%;
+}
+/* Coeur vide dans .heart_card */
+.heart_card .heart__icon--empty {
+    position: absolute;
+    transition: opacity 800ms;
+    opacity: 1; /* Assurez-vous que l'opacité est initialement définie à 1 pour qu'il soit visible */
+}
 
+/* Coeur rempli dans .heart_card */
+.heart_card .heart__icon--full {
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient($cd-btn-start, $cd-btn-end);
+    background-clip: text;
+    color: transparent;
+    transition: opacity 800ms;
+}
+
+/* Au survol de .heart_card, progressivement */
+.heart_card:hover .heart__icon--empty {
+    opacity: 0; /* L'opacité devient 0 au survol */
+}
+
+.heart_card:hover .heart__icon--full {
+    opacity: 1; /* L'opacité devient 1 au survol */
 }
