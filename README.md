@@ -34,7 +34,9 @@ Vous avez désormais tous les éléments pour construire le site. Vous vous lanc
 </pre>
 
 ## <u>***Compatibilité***</u> ##
-La cible étant les personnes connectées et pressées, le site est donc développé en utilisant l’approche ***Mobile-first***.<br>
+La cible étant les personnes connectées et pressées, le site est donc développé en utilisant l’approche 
+
+***Mobile-first***.<br>
 Le site est donc intégré en suivant les maquettes mobile, puis le responsive suit pour les tablettes et ordinateurs en suivant les maquettes données par le designer.<br>
 ● L’ensemble du site est responsive sur mobile, tablette et desktop.<br>
 ● Les pages sont passer à la validation W3C en HTML et CSS.<br>
@@ -42,17 +44,10 @@ Le site est donc intégré en suivant les maquettes mobile, puis le responsive s
 
 ## <u>***Technologies***</u> ##
 ● HTML.<br>
-● CSS, Méthodologie BEM.<br>
-● Pré-processeur Sass, pas de JavaScript.<br>
+● CSS.<br>
+● Pré-processeur Sass.<br>
 ● Structuration Sass avec le système d'architecture 7-1.<br>
 ● Gestion des dépendances avec Node Package Manager (npm) pour l'automatisation des tâches de développement.<br>
-
-
-
-## <u>***Gestion des Dépendances***</u> ##
-Ce projet utilise Node.js et NPM (Node Package Manager) pour gérer ses dépendances.<br>
-Node.js est nécessaire pour exécuter NPM. <br>
-Assurez-vous d'avoir Node.js installé localement pour travailler avec ce projet.
 
 ## <u> ***Accès au site*** </u> ##
 
