@@ -1,6 +1,6 @@
 # ***<u> " OhMyFood - Paris" </u>***
-## !## ![iMac 2021](https://img.shields.io/badge/iMac%202021-000000?style=for-the-badge&logo=apple&logoColor=white) ![Visual Studio Code][def] ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Visual Studio Code][def] ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) [!
-
+## ![iMac 2021](https://img.shields.io/badge/iMac%202021-000000?style=for-the-badge&logo=apple&logoColor=white) ![Visual Studio Code][def] ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Visual Studio Code][def] ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Alt text](../../Desktop/screenshot.png)
 # ![Formation](https://img.shields.io/badge/Formation%20-green?style=for-the-badge)  ![OpenClassrooms-IntégrateurWeb](https://img.shields.io/badge/OpenClassrooms%20-%20Int%C3%A9grateur%20Web%20-blue?style=for-the-badge)
  
 ### <u> Projet 4 :</u> ***" Améliorez l'interface d'un site mobile avec des animations CSS".*** 
@@ -45,36 +45,19 @@ Le site est donc intégré en suivant les maquettes mobile, puis le responsive s
 ● CSS, Méthodologie BEM.<br>
 ● Pré-processeur Sass, pas de JavaScript.<br>
 ● Structuration Sass avec le système d'architecture 7-1.<br>
-● NPM (Node Package Manager) pour la gestion des dépendances et l'automatisation des tâches de développement.<br>
-● Code versionné sur GitHub avec l'extension Gitflow.<br>
+● Gestion des dépendances avec Node Package Manager (npm) pour l'automatisation des tâches de développement.<br>
+
 
 
 ## <u>***Gestion des Dépendances***</u> ##
-Ce projet utilise ***NPM (Node Package Manager)*** pour gérer ses dépendances.<br>
-Node.js est nécéssaire pour exécuter NPM. <br>
-Assurez-vous d'avoir Node.js installé localement pour travaillez avec ce projet.
-
-## <u> ***Script de construction*** </u> ##
-Ce projet utilise des scripts de construction pour gérer les fichiers SCSS et générer le CSS.<br>
-<u> Voici comment les utiliser : </u>
-
-- **dev** : Utilisez ce script pendant le développement. Il surveille les modifications dans le fichier <u>'main.scss'</u> et compile automatiquement le SCSS en CSS chaque fois qu'une modification est détecter.<br>
-Pour lancer le mode développement, exécutez :
->npm run dev
-
-- **build** : Utilisez ce script pour générer une version finale et optimisée du CSS pour la production ou le déploiement.<br>
-Il ne surveille pas les modifications en temps réel.<br>
-Pour générer la version de production, éxécutez :
-
-> npm run build
-
-Assurez-vous d'avoir Node.js et NPM installés localement pour éxécuter ces scripts.
-
+Ce projet utilise Node.js et NPM (Node Package Manager) pour gérer ses dépendances.<br>
+Node.js est nécessaire pour exécuter NPM. <br>
+Assurez-vous d'avoir Node.js installé localement pour travailler avec ce projet.
 
 ## <u> ***Accès au site*** </u> ##
 
 Le site est accessible sur GitHubPages via cette adresse ci-dessous :<br>
-> ***https://buens18k.github.io/Projet4_animation-CSS/***
+> ***https://wassila66.github.io/ohmyfood-4/***
 
 ## <u> ***Auteurs*** </u> ###
 
