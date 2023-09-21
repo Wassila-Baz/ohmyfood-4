@@ -1,4 +1,4 @@
-/* Styles de base */
+
 body, html {
     font-family: "Roboto", sans-serif;
     padding: 0;
@@ -8,20 +8,20 @@ body, html {
     min-width: 320px;
 }
 
-/* Styles pour le header et le main */
+
 header, main {
     flex-direction: column;
     align-items: center;
 }
 
-/* Styles pour la flèche gauche */
+
 .fa-arrow-left {
     position: absolute;
     top: 26px;
     left: 20px;
 }
+ 
 
-/* Styles pour les images */
 img {
     position: relative;
     top: 0;
@@ -36,7 +36,6 @@ img {
     }
 }
 
-/* Styles pour le titre */
 .title {
     font-family: "Shrikhand";
     font-size: 18px;
@@ -50,7 +49,7 @@ img {
     }
 }
 
-/* Styles pour le titre du menu */
+
 .title-menu {
     padding-top: 40px;
     margin-left: 15px;
@@ -70,7 +69,7 @@ img {
     }
 }
 
-/* Styles pour le conteneur du menu */
+
 .container-menu {
     background-color: #F6F6F6;
     overflow: hidden;
@@ -97,7 +96,6 @@ img {
     }
 }
 
-/* Styles pour les éléments de menu */
 .menu-item {
     margin: 15px;
     padding: 15px;
@@ -114,9 +112,16 @@ img {
         height: 45px;
     }
 }
+.menu-item h4,
+.menu-item p {
+    margin-right: 80px; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
 
 
-/* Styles pour les titres des éléments de menu */
+
 h4 {
     margin: 0 0 5px 15px;
     font-size: 18px;
@@ -127,7 +132,6 @@ h4 {
     white-space: nowrap;
 }
 
-/* Styles pour les descriptions des éléments de menu */
 .menu-item > p {
     font-size: 15.043px;
     font-weight: 300;
@@ -139,7 +143,6 @@ h4 {
     white-space: nowrap;
 }
 
-/* Styles pour les prix des éléments de menu */
 .item-price {
     position: relative;
     bottom: 36px;
@@ -158,7 +161,7 @@ h4 {
     }
 }
 
-/* Styles pour la confirmation au survol */
+
 .confirmation {
     position: absolute;
     top: -2px;
@@ -186,7 +189,7 @@ h4 {
     color: #F6F6F6;
 }
 
-/* Styles au survol des éléments de menu */
+
 .menu-item:hover .confirmation {
     transform: translateX(0);
     opacity: 1;
@@ -202,7 +205,7 @@ h4 {
     transition-duration: 0.5s;
 }
 
-/* Styles pour les boutons */
+
 .button {
     display: flex;
 
@@ -233,26 +236,3 @@ h4 {
     }
 }
 
-/* Styles pour les animations d'entrée, plat et dessert */
-.menu.entrance.animate-section {
-    animation: fade-in 0.4s ease 0.5s both;
-}
-
-.dish {
-    animation: fade-in 0.4s ease 0.7s both; /* Ajustez le délai ici */
-}
-
-.dessert {
-    animation: fade-in 0.4s ease 0.9s both; /* Ajustez le délai ici */
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

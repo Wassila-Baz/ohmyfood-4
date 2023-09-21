@@ -32,9 +32,6 @@ Paul<br>
 Vous avez désormais tous les éléments pour construire le site. Vous vous lancez dans cette nouvelle aventure !
 </pre>
 
-## <u>***Compatibilité***</u> ##
-La cible étant les personnes connectées et pressées, le site est donc développé en utilisant l’approche 
-
 ***Mobile-first***.<br>
 Le site est donc intégré en suivant les maquettes mobile, puis le responsive suit pour les tablettes et ordinateurs en suivant les maquettes données par le designer.<br>
 ● L’ensemble du site est responsive sur mobile, tablette et desktop.<br>

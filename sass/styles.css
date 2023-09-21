@@ -25,29 +25,6 @@ header h1 {
   }
 }
 
-/* LOCALISATION */
-.location {
-  background: #EAEAEA;
-  border: none;
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 17px;
-  padding-left: 48px;
-}
-
-.fa-solid.fa-arrow-left {
-  color: #353535; /* couleur icone localisation */
-}
-
-input {
-  border: none;
-  background-color: #EAEAEA;
-  display: flex;
-  font-size: 16px;
-}
-
 /*FOOTER*/
 footer {
   background: var(--grey, #353535);
@@ -136,6 +113,9 @@ footer {
   text-align: center;
   padding-top: 40px;
   margin: 0px 58px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .explorer p {
@@ -145,20 +125,17 @@ footer {
   line-height: normal;
 }
 
-/*SECTION FONCTIONNEMENT*/
+/* SECTION FONCTIONNEMENT */
 .functioning {
   padding-bottom: 30px;
   text-align: center;
   margin: 0 auto;
   max-width: 1280px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
+  padding: 2rem 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .functioning {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-    align-self: stretch;
+    padding: 0 150px 75px 150px;
   }
 }
 .functioning-title {
@@ -170,14 +147,11 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .functioning ol {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 30%;
-    height: 72.379px;
-    gap: 29px;
+    width: 31%;
+    gap: 24px;
   }
 }
 .functioning-section li {
@@ -188,6 +162,13 @@ footer {
   font-weight: 500;
   line-height: normal;
   flex-wrap: nowrap;
+  padding: 24px; /* 1.5rem en pixels */
+  margin: 16px 0 16px 12px; /* 1rem 0 1rem .75rem en pixels */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125); /* .25rem .25rem .5rem en pixels */
+  border-radius: 20px; /* 1.25rem en pixels */
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
 }
 .functioning .step-1,
 .functioning .step-2,
@@ -245,34 +226,22 @@ footer {
 .functioning .step-3 .fa-solid.fa-store:hover {
   color: #9356DC; /* Changement de couleur au survol */
 }
-@media (min-width: 768px) {
-  .functioning .step-1,
-  .functioning .step-2,
-  .functioning .step-3 {
-    flex-wrap: nowrap;
-  }
-}
 
-/*SECTION RESTAUTANT*/
+/* SECTION RESTAUTANT */
 .restaurant-section {
   background: var(--background, #F6F6F6);
   text-decoration: none;
   padding: 0 18px 75px 18px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .restaurant-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    align-self: stretch;
-    padding: 0px 120px;
+    padding: 0 150px 75px 150px;
   }
 }
 
 a {
-  text-decoration: none; /* Supprime la soulignement */
-  outline: none; /* Supprime la bordure de focus */
+  text-decoration: none;
+  outline: none;
   color: inherit; /* Utilise la couleur du texte environnant */
 }
 
@@ -289,10 +258,10 @@ a {
 .restaurant-cards {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Empêche les cartes de s'étirer horizontalement en version mobile */
-  gap: 50px; /* Ajoute un espacement (gap) entre les cartes */
+  flex-direction: column;
+  gap: 50px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .restaurant-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -301,14 +270,13 @@ a {
   }
 }
 
-/* Ajoutez cette règle CSS pour la marge en bas de chaque carte, sauf la dernière */
 .restaurant-card {
-  margin-bottom: 18px; /* Espacement entre les cartes */
+  margin-bottom: 18px;
 }
 
-/* Supprimez la marge en bas de la dernière carte */
+/* Supprime la marge en bas de la dernière carte */
 .restaurant-card:last-child {
-  margin-bottom: 0; /* Aucun espacement en bas de la dernière carte */
+  margin-bottom: 0;
 }
 
 .card-menu {
@@ -316,7 +284,7 @@ a {
   flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
-  position: relative; /* Ajout de position relative au conteneur */
+  position: relative;
 }
 @media (min-width: 768px) {
   .card-menu {
@@ -333,9 +301,10 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .card-badge {
   font-family: "roboto";
-  position: absolute; /* Utilisation de position absolute pour le badge */
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,12 +312,12 @@ a {
   height: 29px;
   flex-shrink: 0;
   border-radius: 2px;
-  background: var(--green, #99E2D0);
-  color: var(--green-font, #008766);
+  background: #99E2D0;
+  color: #008766;
   font-size: 14px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  right: 0.5rem; /* À 0,5rem du bord gauche */
-  top: 0.5rem; /* À 0,5rem du bord supérieur */
+  right: 0.5rem;
+  top: 0.5rem;
 }
 
 .card-content {
@@ -377,14 +346,14 @@ a {
 .heart_card {
   position: absolute;
   top: 215px;
-  left: 80%;
+  left: 87%;
 }
 
 /* Coeur vide dans .heart_card */
 .heart_card .heart__icon--empty {
   position: absolute;
   transition: opacity 800ms;
-  opacity: 1; /* Assurez-vous que l'opacité est initialement définie à 1 pour qu'il soit visible */
+  opacity: 1;
 }
 
 /* Coeur rempli dans .heart_card */
@@ -400,14 +369,13 @@ a {
 
 /* Au survol de .heart_card, progressivement */
 .heart_card:hover .heart__icon--empty {
-  opacity: 0; /* L'opacité devient 0 au survol */
+  opacity: 0;
 }
 
 .heart_card:hover .heart__icon--full {
-  opacity: 1; /* L'opacité devient 1 au survol */
+  opacity: 1;
 }
 
-/* Styles de base */
 body, html {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -417,20 +385,17 @@ body, html {
   min-width: 320px;
 }
 
-/* Styles pour le header et le main */
 header, main {
   flex-direction: column;
   align-items: center;
 }
 
-/* Styles pour la flèche gauche */
 .fa-arrow-left {
   position: absolute;
   top: 26px;
   left: 20px;
 }
 
-/* Styles pour les images */
 img {
   position: relative;
   top: 0;
@@ -447,7 +412,6 @@ img {
   }
 }
 
-/* Styles pour le titre */
 .title {
   font-family: "Shrikhand";
   font-size: 18px;
@@ -462,7 +426,6 @@ img {
   }
 }
 
-/* Styles pour le titre du menu */
 .title-menu {
   padding-top: 40px;
   margin-left: 15px;
@@ -482,7 +445,6 @@ img {
   top: 13px;
 }
 
-/* Styles pour le conteneur du menu */
 .container-menu {
   background-color: #F6F6F6;
   overflow: hidden;
@@ -511,7 +473,6 @@ img {
   }
 }
 
-/* Styles pour les éléments de menu */
 .menu-item {
   margin: 15px;
   padding: 15px;
@@ -530,7 +491,14 @@ img {
   }
 }
 
-/* Styles pour les titres des éléments de menu */
+.menu-item h4,
+.menu-item p {
+  margin-right: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 h4 {
   margin: 0 0 5px 15px;
   font-size: 18px;
@@ -541,7 +509,6 @@ h4 {
   white-space: nowrap;
 }
 
-/* Styles pour les descriptions des éléments de menu */
 .menu-item > p {
   font-size: 15.043px;
   font-weight: 300;
@@ -553,7 +520,6 @@ h4 {
   white-space: nowrap;
 }
 
-/* Styles pour les prix des éléments de menu */
 .item-price {
   position: relative;
   bottom: 36px;
@@ -573,7 +539,6 @@ h4 {
   }
 }
 
-/* Styles pour la confirmation au survol */
 .confirmation {
   position: absolute;
   top: -2px;
@@ -600,7 +565,6 @@ h4 {
   color: #F6F6F6;
 }
 
-/* Styles au survol des éléments de menu */
 .menu-item:hover .confirmation {
   transform: translateX(0);
   opacity: 1;
@@ -616,7 +580,6 @@ h4 {
   transition-duration: 0.5s;
 }
 
-/* Styles pour les boutons */
 .button {
   display: flex;
 }
@@ -646,37 +609,14 @@ h4 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/* Styles pour les animations d'entrée, plat et dessert */
-.menu.entrance.animate-section {
-  animation: fade-in 0.4s ease 0.5s both;
-}
-
-.dish {
-  animation: fade-in 0.4s ease 0.7s both; /* Ajustez le délai ici */
-}
-
-.dessert {
-  animation: fade-in 0.4s ease 0.9s both; /* Ajustez le délai ici */
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/*LOADER*/
+/* LOADER */
 .loader-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,8 +635,8 @@ h4 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: 0 5px;
-  animation: bounce 0.5s alternate infinite;
+  margin: 0 15px;
+  animation: bounce 0.5s alternate infinite; /* Alternance infinie */
 }
 
 .loader-ball-1 {
@@ -714,6 +654,7 @@ h4 {
   animation-delay: 0.3s;
 }
 
+/* Apparition */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -722,21 +663,18 @@ h4 {
     opacity: 1;
   }
 }
+/* Disparition */
 @keyframes fadeOut {
   to {
     opacity: 0;
   }
 }
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(40px);
   }
 }
-/*page  de menu qui arrive progressivement*/
-/*COEURS droite des titres*/
+/* COEURS droite des titres */
 .heart__icon {
   position: relative;
   display: flex;
@@ -746,7 +684,6 @@ h4 {
   left: 1%;
   top: -3px;
   transform: translate(-50%, -50%);
-  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .heart__icon {
@@ -763,12 +700,12 @@ h4 {
   }
 }
 
-/* cœur vide */
+/* Cœur vide */
 .heart__icon--empty {
   position: absolute;
 }
 
-/* cœur rempli */
+/* Cœur rempli */
 .heart__icon--full {
   position: absolute;
   opacity: 0;
@@ -788,6 +725,29 @@ h4 {
   opacity: 1;
 }
 
+/* STYLE POUR ENTRÉE PLAT ET DESSERT */
+.menu.entrance.animate-section {
+  animation: fade-in 0.4s ease-in-out 0.5s both;
+}
+
+.dish {
+  animation: fade-in 0.4s ease-in-out 0.7s both;
+}
+
+.dessert {
+  animation: fade-in 0.4s ease-in-out 0.9s both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*LOCALISATION*/
 .location {
   background: #EAEAEA;

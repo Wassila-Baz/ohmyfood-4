@@ -1,20 +1,18 @@
-
-/*LOADER*/
+/* LOADER */
 .loader-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.5s ease-in-out, fadeOut 2.5s ease-in-out 0.5s forwards;
-    pointer-events: none; 
+    pointer-events: none;
     z-index: 9999;
 }
-
 
 .ball-container {
     display: flex;
@@ -26,25 +24,26 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin: 0 5px;
-    animation: bounce 0.5s alternate infinite;
+    margin: 0 15px;
+    animation: bounce 0.5s alternate infinite; /* Alternance infinie */
 }
 
 .loader-ball-1 {
-    background-color: #9356DC;
+    background-color: $primary;
     animation-delay: 0.1s;
 }
 
 .loader-ball-2 {
-    background-color: #FF79DA;
+    background-color: $secondary;
     animation-delay: 0.2s;
 }
 
 .loader-ball-3 {
-    background-color: #99E2D0;
+    background-color: $tertiary; 
     animation-delay: 0.3s;
 }
 
+/* Apparition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -54,6 +53,7 @@
     }
 }
 
+/* Disparition */
 @keyframes fadeOut {
     to {
         opacity: 0;
@@ -61,22 +61,13 @@
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(40px);
     }
 }
 
-/*page  de menu qui arrive progressivement*/
-
-
-/*COEURS droite des titres*/
-
-
-.heart__icon  {
-   
+/* COEURS droite des titres */
+.heart__icon {
     position: relative;
     display: flex;
     justify-content: center;
@@ -85,44 +76,64 @@
     left: 1%;
     top: -3px;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
-  @media (min-width:768px) {
-    left: 70%;
-    top: 59px;
-    position: absolute;
-
-  
-  }
-  @media (min-width:1024px) {
-    left: 548px;
-    top: 59px;
-    position: absolute;
+    
+    @media (min-width: 768px) {
+        left: 70%;
+        top: 59px;
+        position: absolute;
     }
-  }
-
-
-
-/* cœur vide */
-.heart__icon--empty {
-position: absolute;
-
+  
+    @media (min-width: 1024px) {
+        left: 548px;
+        top: 59px;
+        position: absolute;
+    }
 }
 
-/* cœur rempli */
+/* Cœur vide */
+.heart__icon--empty {
+    position: absolute;
+}
+
+/* Cœur rempli */
 .heart__icon--full {
-position: absolute;
-opacity: 0;
-background: linear-gradient($cd-btn-start, $cd-btn-end);
-background-clip: text;
-color: transparent;
-transition: opacity 800ms ; 
-}  
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient($cd-btn-start, $cd-btn-end);
+    background-clip: text;
+    color: transparent;
+    transition: opacity 800ms;
+}
 
 /* Au survol, progressivement */
 .heart__icon:hover .heart__icon--full {
-opacity: 1;
+    opacity: 1;
 }
 
 .heart__icon:hover .heart__icon--empty {
-opacity: 1;
+    opacity: 1;
+}
+
+/* STYLE POUR ENTRÉE PLAT ET DESSERT */
+.menu.entrance.animate-section {
+    animation: fade-in 0.4s ease-in-out 0.5s both;
+}
+
+.dish {
+    animation: fade-in 0.4s ease-in-out 0.7s both; 
+}
+
+.dessert {
+    animation: fade-in 0.4s ease-in-out 0.9s both;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
