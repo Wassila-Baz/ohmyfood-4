@@ -48,7 +48,7 @@ Le site est donc intégré en suivant les maquettes mobile, puis le responsive s
 ## <u> ***Accès au site*** </u> ##
 
 Le site est accessible sur GitHubPages via cette adresse ci-dessous :<br>
-> ***https://wassila66.github.io/ohmyfood-4/***
+> ***https://wassila-baz.github.io/ohmyfood-4/***
 
 ## <u> ***Auteurs*** </u> ###
 
