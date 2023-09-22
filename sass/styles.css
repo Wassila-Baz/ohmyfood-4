@@ -495,8 +495,6 @@ img {
 .menu-item p {
   margin-right: 80px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 h4 {
@@ -504,8 +502,6 @@ h4 {
   font-size: 18px;
   font-weight: 500;
   flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -515,9 +511,16 @@ h4 {
   margin-top: 5px;
   margin-left: 15px;
   padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+.menu-item > p:hover,
+.menu-item > h4:hover {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  width: calc(100% - 120px);
 }
 
 .item-price {
