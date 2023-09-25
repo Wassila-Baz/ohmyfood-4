@@ -12,12 +12,6 @@
     text-align: center;
     padding-top: 40px;
     margin: 0px 58px;
-  
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    
-    
 }
 
 .explorer p {
@@ -32,7 +26,7 @@
     padding-bottom: 30px;
     text-align: center;
     margin: 0 auto;
-    max-width: 1280px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
+    max-width: 1280px; 
     padding: 2rem 1rem;
     @media (min-width: 1024px) {
         padding: 0 150px 75px 150px;
@@ -65,10 +59,10 @@
         font-weight: 500;
         line-height: normal;
         flex-wrap: nowrap;
-        padding: 24px; /* 1.5rem en pixels */
-        margin: 16px 0 16px 12px; /* 1rem 0 1rem .75rem en pixels */
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125); /* .25rem .25rem .5rem en pixels */
-        border-radius: 20px; /* 1.25rem en pixels */
+        padding: 24px; 
+        margin: 16px 0 16px 12px; 
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125); 
+        border-radius: 20px;
         background-color: #f6f6f6;
         display: flex;
         position: relative;
@@ -120,7 +114,7 @@
         .fa-solid.fa-mobile-screen-button:hover,
         .fa-solid.fa-list-ul:hover,
         .fa-solid.fa-store:hover {
-            color: #9356DC; /* Changement de couleur au survol */
+            color: #9356DC; 
         }
     }
 }

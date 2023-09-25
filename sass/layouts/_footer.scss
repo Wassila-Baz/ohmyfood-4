@@ -7,17 +7,17 @@ footer {
     align-items: flex-start;
     gap: 16px;
     @media (min-width: 768px) {
-        width: 97%; /* Pour prendre toute la largeur */
         display: flex;
         align-items: flex-end;
     }
+ 
 }
 
 .footer-container {
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-between; /* Pour répartir les éléments horizontalement */
-        align-items: center; /* Pour aligner verticalement les éléments au centre */
+        justify-content: space-between; 
+        align-items: center; 
     }
 }
 
@@ -32,7 +32,7 @@ footer {
     margin-left: 0px;
     @media (min-width: 768px) {
         order: 1;
-        margin-left: 46px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+        margin-left: 46px; 
         margin-top: 25px;
     }
 }

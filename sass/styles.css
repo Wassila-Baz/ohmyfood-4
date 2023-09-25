@@ -36,7 +36,6 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    width: 97%; /* Pour prendre toute la largeur */
     display: flex;
     align-items: flex-end;
   }
@@ -45,8 +44,8 @@ footer {
 @media (min-width: 768px) {
   .footer-container {
     display: flex;
-    justify-content: space-between; /* Pour répartir les éléments horizontalement */
-    align-items: center; /* Pour aligner verticalement les éléments au centre */
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -63,7 +62,7 @@ footer {
 @media (min-width: 768px) {
   .footer-title {
     order: 1;
-    margin-left: 46px; /* Vous pouvez laisser à zéro pour que le titre soit aligné à gauche */
+    margin-left: 46px;
     margin-top: 25px;
   }
 }
@@ -113,9 +112,6 @@ footer {
   text-align: center;
   padding-top: 40px;
   margin: 0px 58px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .explorer p {
@@ -130,7 +126,7 @@ footer {
   padding-bottom: 30px;
   text-align: center;
   margin: 0 auto;
-  max-width: 1280px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
+  max-width: 1280px;
   padding: 2rem 1rem;
 }
 @media (min-width: 1024px) {
@@ -162,10 +158,10 @@ footer {
   font-weight: 500;
   line-height: normal;
   flex-wrap: nowrap;
-  padding: 24px; /* 1.5rem en pixels */
-  margin: 16px 0 16px 12px; /* 1rem 0 1rem .75rem en pixels */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125); /* .25rem .25rem .5rem en pixels */
-  border-radius: 20px; /* 1.25rem en pixels */
+  padding: 24px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
   background-color: #f6f6f6;
   display: flex;
   position: relative;
@@ -224,7 +220,7 @@ footer {
 .functioning .step-3 .fa-solid.fa-mobile-screen-button:hover,
 .functioning .step-3 .fa-solid.fa-list-ul:hover,
 .functioning .step-3 .fa-solid.fa-store:hover {
-  color: #9356DC; /* Changement de couleur au survol */
+  color: #9356DC;
 }
 
 /* SECTION RESTAUTANT */
@@ -765,7 +761,7 @@ h4 {
 }
 
 .location .fa-solid {
-  color: #353535; /* Couleur de l'icône de localisation */
+  color: #353535;
 }
 
 .location input {
@@ -773,10 +769,6 @@ h4 {
   background-color: #EAEAEA;
   display: flex;
   font-size: 16px;
-}
-
-body {
-  margin: 0px;
 }
 
 .button {
