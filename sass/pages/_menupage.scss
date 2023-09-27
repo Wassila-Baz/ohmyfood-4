@@ -170,48 +170,7 @@ h4 {
 }
 
 
-.confirmation {
-    position: absolute;
-    top: -2px;
-    right: 0;
-    width: 69px;
-    height: 78px;
-    background-color: $tertiary;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0.75rem;
-    transform: translateX(100%);
-    opacity: 1;
-    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
-    z-index: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
-}
-
-.confirmation-icone {
-    position: absolute;
-    top: 40%;
-    right: 25px;
-    transform: translateY(-50%) rotate(5deg);
-    transition: transform 0.5s ease-in-out;
-    color: #F6F6F6;
-}
-
-
-.menu-item:hover .confirmation {
-    transform: translateX(0);
-    opacity: 1;
-    border-right: 3px solid $tertiary;
-}
-
-.menu-item:hover .item-price {
-    transform: translateX(-65px);
-}
-
-.menu-item:hover .confirmation-icone {
-    transform: translateY(0) rotate(360deg);
-    transition-duration: 0.5s;
-}
 
 
 .button {
